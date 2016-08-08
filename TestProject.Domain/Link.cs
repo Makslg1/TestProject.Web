@@ -8,7 +8,9 @@ using Newtonsoft.Json;
 
 namespace TestProject.Domain
 {
-  
+    /// <summary>
+    /// Модель ссылки
+    /// </summary>
     public class Link
     {
         public int Id { get; set; }

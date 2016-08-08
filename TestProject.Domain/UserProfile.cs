@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 
 namespace TestProject.Domain
 {
-    
+    /// <summary>
+    /// Модель пользователя
+    /// </summary>
     [Table("UserProfile")]
     public class UserProfile
     {

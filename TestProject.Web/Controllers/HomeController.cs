@@ -9,26 +9,24 @@ using TestProject.Domain;
 
 
 namespace TestProject.Web.Controllers
-{   
+{
     public class HomeController : Controller
     {
+        /// <summary>
+        /// Главная страница
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             return View();
         }
-
+        /// <summary>
+        /// Страница со списком ссылок
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Details()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
-
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-
-        //    return View();
-        //}
     }
 }

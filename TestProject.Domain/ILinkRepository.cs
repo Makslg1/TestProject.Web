@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestProject.Domain
 {
+    /// <summary>
+    /// Интерфейс репозитория ссылки
+    /// </summary>
     public interface ILinkRepository
     {
         IQueryable<Link> All { get; }  

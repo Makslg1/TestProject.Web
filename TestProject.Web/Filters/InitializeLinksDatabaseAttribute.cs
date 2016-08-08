@@ -8,6 +8,9 @@ using TestProject.Web.Infrastructure;
 
 namespace TestProject.Web.Filters
 {
+    /// <summary>
+    /// Фильтр по созданию базы данных при первом запуске. 
+    /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public class InitializeLinksDatabaseAttribute : ActionFilterAttribute
     {
@@ -37,7 +40,7 @@ namespace TestProject.Web.Filters
                 }
                 catch (Exception ex)
                 {
-                    throw new InvalidOperationException("База данных не может  быть инициализирована", ex);
+                    throw new InvalidOperationException("База данных не может  быть инициализирована. Проверьте строку подключение в config файле", ex);
                 }
             }
         }

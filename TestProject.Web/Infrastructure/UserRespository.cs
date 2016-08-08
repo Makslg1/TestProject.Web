@@ -7,6 +7,9 @@ using TestProject.Domain;
 
 namespace TestProject.Web.Infrastructure
 {
+    /// <summary>
+    /// Репозиторий для работы с пользователями
+    /// </summary>
     public class UserRespository : IUserProfileRepository
     {
         LinksDatabase _context;
@@ -27,15 +30,15 @@ namespace TestProject.Web.Infrastructure
         UserProfile IUserProfileRepository.CurrentUser
         {
             get
-            {     
+            {
                 //В базе данных нам нужен только один пользователь.           
-                if (_context.UserProfiles.Count()==0)
+                if (_context.UserProfiles.Count() == 0)
                 {
-                    _context.UserProfiles.Add(new UserProfile {  UserName="User"});
+                    _context.UserProfiles.Add(new UserProfile { UserName = "User" });
                     _context.SaveChanges();
                 }
                 return _context
-                    .UserProfiles                             
+                    .UserProfiles
                     .FirstOrDefault();
             }
         }

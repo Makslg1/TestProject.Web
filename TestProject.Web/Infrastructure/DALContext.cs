@@ -6,6 +6,9 @@ using TestProject.Domain;
 
 namespace TestProject.Web.Infrastructure
 {
+    /// <summary>
+    /// Реализация интерфейса слоя доступа к данным
+    /// </summary>
     public class DALContext : IDALContext
     {
         LinksDatabase _database;

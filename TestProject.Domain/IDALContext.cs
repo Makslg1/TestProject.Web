@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestProject.Domain
 {
+    /// <summary>
+    /// Интерфейс слоя доступа к данным
+    /// </summary>
     public interface IDALContext
     {
         IUserProfileRepository Users { get; }

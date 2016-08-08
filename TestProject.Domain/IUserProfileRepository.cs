@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestProject.Domain
 {
+    /// <summary>
+    /// Интерфейс репозитория пользователя
+    /// </summary>
     public interface IUserProfileRepository
     {
         IQueryable<UserProfile> All { get; }
