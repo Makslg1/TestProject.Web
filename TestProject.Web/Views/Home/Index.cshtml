@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Главная";
+}
+
+
+<div class="container">
+    <header>
+               <h1 data-animated="GoIn">Сайт по созданию коротких ссылок</h1>
+    </header> 
+    <div class="col-lg-8 col-lg-offset-2 mt centered"  ng-app="app" >
+        <h4>Для добавления короткой ссылки в список, заполните форму</h4>
+        <form class="form-inline" name="urlForm"  ng-controller="FormController" ng-submit="submit()">
+            <div class="form-group" style="min-width:70%;">
+                <label class="sr-only" for="exampleInputUrl2">Введите ссылку</label>
+                <input type="url"  name="url" class="form-control" id="exampleInputEmail2" ng-model="link" placeholder="Введите ссылку" style="min-width:100%;" required>
+
+            </div>
+            <button type="submit" class="btn btn-info">Отправить</button>
+            <br />
+            <br />
+            <div  data-animated="FadeIn" class="alert alert-warning" ng-show="urlForm.url.$error.required && urlForm.url.$dirty">
+                Ссылка не может быть пустой
+            </div>
+            <div data-animated="FadeIn" class="alert alert-warning" ng-show="urlForm.url.$error.url && urlForm.url.$dirty">
+                Не забудьте добавить  http://
+            </div>
+            <div  data-animated="FadeIn" class="alert alert-success" ng-show="showMessage && !urlForm.url.$dirty">
+                Ваша ссылка успешно отправлена
+            </div>
+        </form>
+        <br />
+        @Html.ActionLink("Посмотреть список ссылок", "Details", "Home",new { @class= "btn btn-success" }  )
+    </div>
+</div>
+

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="description" content="The description of my page" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="~/Content/assets/js/html5shiv.js"></script>
+      <script src="~/Content/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+</head>
+    <!-- START BODY -->
+    <body class="nomobile">
+        <!-- START HEADER -->
+        <section id="header">
+
+            @RenderBody()             
+        
+            <!-- LAYER OVER THE SLIDER TO MAKE THE WHITE TEXTE READABLE -->
+            <div id="layer"></div>
+            <!-- END LAYER -->
+            <!-- START SLIDER -->
+            <div id="slider" class="rev_slider">
+                <ul>
+                    <li data-transition="slideleft" data-slotamount="1" data-thumb="~/Content/assets/img/slider/1.jpg">
+                        <img src="~/Content/assets/img/slider/1.jpg">
+                    </li>
+                    <li data-transition="slideleft" data-slotamount="1" data-thumb="~/Content/assets/img/slider/2.jpg">
+                        <img src="~/Content/assets/img/slider/2.jpg">
+                    </li>
+                    <li data-transition="slideleft" data-slotamount="1" data-thumb="~/Content/assets/img/slider/3.jpg">
+                        <img src="~/Content/assets/img/slider/3.jpg">
+                    </li>
+                    <li data-transition="slideleft" data-slotamount="1" data-thumb="~/Content/assets/img/slider/4.jpg">
+                        <img src="~/Content/assets/img/slider/4.jpg">
+                    </li>
+                </ul>
+            </div>
+            <!-- END SLIDER -->
+        </section>
+        <!-- END HEADER -->
+
+
+        @*<div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Details", "Details", "Home")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                </footer>
+            </div>*@
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
