@@ -7,6 +7,9 @@ using TestProject.Domain;
 
 namespace TestProject.Web.Tests.Infrastructure
 {
+    /// <summary>
+    /// тестовый репозиторий для работы со ссылками
+    /// </summary>
     class TestLinkRepository : ILinkRepository
     {
         private List<Link> _links = new List<Link>();

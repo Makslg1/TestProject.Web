@@ -35,7 +35,7 @@ namespace TestProject.Web.Tests.Controllers
             ViewResult result = controller.Details() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.IsNotNull(result);
         }
 
     }

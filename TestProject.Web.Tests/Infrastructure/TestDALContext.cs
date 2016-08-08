@@ -7,6 +7,9 @@ using TestProject.Domain;
 
 namespace TestProject.Web.Tests.Infrastructure
 {
+    /// <summary>
+    /// реализация тестового слоя доступа к данным
+    /// </summary>
     class TestDALContext : IDALContext
     {
         private static IUserProfileRepository _users = new TestUserRepository();

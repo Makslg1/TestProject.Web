@@ -7,6 +7,9 @@ using TestProject.Domain;
 
 namespace TestProject.Web.Tests.Infrastructure
 {
+    /// <summary>
+    /// Тестовый репозиторий для работы с пользователями
+    /// </summary>
     class TestUserRepository : IUserProfileRepository
     {
         private List<UserProfile> _users = new List<UserProfile>();

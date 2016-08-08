@@ -21,6 +21,9 @@ namespace TestProject.Web.Tests.Controllers
             controller.Request = new HttpRequestMessage();
             controller.Configuration = new System.Web.Http.HttpConfiguration();
         }
+        /// <summary>
+        /// Проверка метода возвращающего весь список ссылок
+        /// </summary>
         [TestMethod]
         public void ApiGetAllLinks()
         {
@@ -31,7 +34,9 @@ namespace TestProject.Web.Tests.Controllers
             Assert.IsTrue(testlink.Count == 1);
         }
 
-
+        /// <summary>
+        /// проверка метода передресации
+        /// </summary>
         [TestMethod]
         public void ApiGetTransition()
         {
@@ -45,6 +50,9 @@ namespace TestProject.Web.Tests.Controllers
                 Assert.IsTrue(testlink[0].CountTransition == 1, "Не увеличивается счетчик");
             }
         }
+        /// <summary>
+        /// проверка метода вставки новый ссылки
+        /// </summary>
         [TestMethod]
         public void ApiPutNewLink()
         {
