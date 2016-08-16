@@ -48,18 +48,6 @@ namespace TestProject.Web.Controllers
             try
             {
                 var ListLinks = _links.All.Where(x => x.Owner.Id == _users.CurrentUser.Id).ToList();
-
-                string root = "";
-                try
-                {
-                    // для прохождения юнит  тестов, ничего другого не придумал
-                    root = Url.Content("~/api/");
-                }
-                catch (Exception)
-                {                  
-                }
-               
-                ListLinks.ForEach(x => x.ShortLink = root + x.ShortLink);
                 return Request.CreateResponse(HttpStatusCode.OK, ListLinks);
             }
             catch (Exception)

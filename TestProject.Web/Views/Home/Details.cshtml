@@ -20,7 +20,7 @@
                 <tbody ng-repeat="model in links">
                     <tr>
                         <td class="text-left"><a href="{{model.OriginalLink}}" target="_blank">{{model.OriginalLink}}</a></td>
-                        <td class="text-left"><a href="{{model.ShortLink}}" target="_blank">{{model.ShortLink}}</a></td>
+                        <td class="text-left"><a href="/api/{{model.ShortLink}}" target="_blank">http://@HttpContext.Current.Request.Url.Authority/api/{{model.ShortLink}}</a></td>
                         <td>{{model.DateCreated | date:'M/d/yyyy HH:mm:ss'}}</td>
                         <td>{{model.CountTransition}}</td>
                     </tr>
